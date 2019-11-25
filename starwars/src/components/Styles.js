@@ -7,7 +7,7 @@ export const Entry = style.div`
   margin-top: 8%;
   margin-left: 10%;
   text-align: justify;
-  transition:width 3s linear
+  transition:width 2.5s linear
   &:hover{
     width: 120%
   }`;
