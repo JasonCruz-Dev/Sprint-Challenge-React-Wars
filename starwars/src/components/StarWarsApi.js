@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Container, Row } from "reactstrap";
+import StarWarsCard from "./StarWarsCard";
 
 function StarWarsApi() {
   // Add your function name here
@@ -11,7 +12,7 @@ function StarWarsApi() {
       .get("https://swapi.co/api/people") // Your API goes here
       .then(res => {
         console.log("API Is Here: ", res.data); // This will print out a message
-        setInfo(res.data);
+        setInfo(res.data.results);
       })
 
       .catch(error => {
@@ -40,7 +41,7 @@ function StarWarsApi() {
         })}
       </Row>
     </Container>
-  );
+  ); // THIS IS TO MAKE SURE SOMETHING SHOWS ON THE SCREEN
 }
 
 export default StarWarsApi;
